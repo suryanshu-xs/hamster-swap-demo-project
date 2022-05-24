@@ -1,12 +1,14 @@
 import Head from 'next/head'
 import React from 'react'
 import Body from '../Components/Body'
-import Footer from '../Components/Footer'
+import Footer, { FooterBottom } from '../Components/Footer'
 import Navbar from '../Components/Navbar'
+import WaveSVG from '../Components/WaveSVG'
 
-export default function Home() {
+
+const Home = () => {
   return (
-    <div>
+    <div className='main-container' >
       <Head>
         <title>Hamster Swap - Suryanshu</title>
         <meta name="description" content="This is just a demo project developed by Suryanshu." />
@@ -14,11 +16,13 @@ export default function Home() {
       </Head>
 
       <Navbar />
-
       <Body />
-
+      <WaveSVG />
       <Footer />
+      <FooterBottom />
 
     </div>
   )
 }
+
+export default Home
